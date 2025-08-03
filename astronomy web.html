@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Discover Astronomy</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+</head>
+<body class="bg-black text-white font-sans">
+
+  <!-- Header & Navigation -->
+  <header class="text-center py-10 bg-gradient-to-r from-indigo-900 to-purple-900 shadow-lg">
+    <h1 class="text-5xl font-bold tracking-tight">🔭 Discover Astronomy</h1>
+    <p class="mt-2 text-lg text-gray-300">Your gateway to eclipses, meteor showers, and stargazing!</p>
+    <nav class="mt-6 flex justify-center gap-4">
+      <a href="#info" class="px-4 py-2 rounded bg-indigo-800 hover:bg-indigo-600 text-white font-semibold transition">Phenomena Info</a>
+      <a href="#contacts" class="px-4 py-2 rounded bg-green-800 hover:bg-green-600 text-white font-semibold transition">Contacts</a>
+      <a href="#eclipse" class="px-4 py-2 rounded bg-purple-800 hover:bg-purple-600 text-white font-semibold transition">Solar Eclipse</a>
+      <a href="#meteors" class="px-4 py-2 rounded bg-blue-800 hover:bg-blue-600 text-white font-semibold transition">Meteor Shower</a>
+    </nav>
+  </header>
+
+  <!-- Info Content Page -->
+  <section id="info" class="py-16 px-4 max-w-3xl mx-auto bg-gradient-to-b from-indigo-900/70 via-black/80 to-purple-900/70 rounded-xl shadow-xl mt-10 mb-10">
+    <h2 class="text-3xl font-bold mb-6 text-center">✨ Astronomical Phenomena Guide</h2>
+    <div class="mb-8">
+      <h3 class="text-2xl font-semibold mb-2">🌒 Solar Eclipse</h3>
+      <p class="text-gray-300 mb-2">
+        A solar eclipse occurs when the Moon passes between the Earth and the Sun, temporarily blocking the Sun's light. There are total, partial, and annular eclipses.
+      </p>
+      <ul class="list-disc list-inside text-gray-400 mb-2">
+        <li><strong>Next Total Solar Eclipse:</strong> August 12, 2026 (visible in parts of Europe, North Africa, and the Arctic)</li>
+        <li><strong>Best Viewing:</strong> Use certified eclipse glasses. Find a location with a clear view of the sky, away from city lights.</li>
+        <li><strong>Guide:</strong> Arrive early, check weather, and never look directly at the Sun without protection.</li>
+      </ul>
+    </div>
+    <div class="mb-8">
+      <h3 class="text-2xl font-semibold mb-2">🌠 Meteor Showers</h3>
+      <p class="text-gray-300 mb-2">
+        Meteor showers are events where many meteors are observed to radiate from one point in the night sky. They occur when Earth passes through debris left by comets.
+      </p>
+      <ul class="list-disc list-inside text-gray-400 mb-2">
+        <li><strong>Perseids:</strong> Peaks August 12-13, best viewed after midnight, look northeast.</li>
+        <li><strong>Geminids:</strong> Peaks December 13-14, visible all night, look near the constellation Gemini.</li>
+        <li><strong>Best Viewing:</strong> Find a dark spot away from city lights, bring a blanket, and allow your eyes to adjust for 20 minutes.</li>
+        <li><strong>Guide:</strong> No equipment needed, just look up! Meteors can appear anywhere but radiate from the shower's "radiant" point.</li>
+      </ul>
+    </div>
+    <div>
+      <h3 class="text-2xl font-semibold mb-2">🌟 Stargazing Tips</h3>
+      <ul class="list-disc list-inside text-gray-400">
+        <li>Check weather and moon phase for best visibility.</li>
+        <li>Use apps like Stellarium or SkyView to locate constellations and events.</li>
+        <li>Bring warm clothes and snacks for comfort.</li>
+        <li>Respect nature and keep noise/lights to a minimum.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Contacts & Socials -->
+  <section id="contacts" class="py-16 px-4 max-w-3xl mx-auto bg-gradient-to-b from-green-900/70 via-black/80 to-blue-900/70 rounded-xl shadow-xl mt-10 mb-10">
+    <h2 class="text-3xl font-bold mb-6 text-center">📞 Astronomy Contacts & Socials</h2>
+    <div class="mb-8">
+      <h3 class="text-xl font-semibold mb-2">Astronomy Experts</h3>
+      <ul class="list-disc list-inside text-gray-400 mb-2">
+        <li><strong>Dr. Trevor Volkwyn</strong> — <a href="mailto:tvolkwyn@uwc.ac.za" class="text-blue-400 underline">tvolkwyn@uwc.ac.za</a></li>
+        <li><strong>Cosmic Community</strong> — <a href="mailto:community@astroinfo.com" class="text-blue-400 underline">community@astroinfo.com</a></li>
+      </ul>
+    </div>
+    <div class="mb-8">
+      <h3 class="text-xl font-semibold mb-2">Social Media Handles</h3>
+      <ul class="list-disc list-inside text-gray-400 mb-2">
+        <li>
+          <strong>Instagram:</strong>
+          <a href="https://www.instagram.com/astronomypicturesdaily?igsh=MTViOXlibW1ydWV3cw%3D%3D&utm_source=qr" target="_blank" class="text-indigo-400 underline">@astronomypicturesdaily</a>
+        </li>
+        <li>
+          <strong>Community Hashtag:</strong> <span class="text-green-400 font-semibold">#CosmicDiscovery</span>
+        </li>
+      </ul>
+    </div>
+    <div>
+      <h3 class="text-xl font-semibold mb-2">Useful Links</h3>
+      <ul class="list-disc list-inside text-gray-400">
+        <li><a href="https://www.timeanddate.com/eclipse/" target="_blank" class="text-blue-400 underline">Eclipse Info & Maps</a></li>
+        <li><a href="https://www.imo.net/" target="_blank" class="text-blue-400 underline">International Meteor Organization</a></li>
+        <li><a href="https://stellarium-web.org/" target="_blank" class="text-blue-400 underline">Stellarium Web Planetarium</a></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Eclipse Animation -->
+  <section id="eclipse" class="py-16 flex flex-col items-center">
+    <h2 class="text-3xl mb-8 font-semibold">🌒 Solar Eclipse</h2>
+    <div class="relative w-72 h-72" id="eclipse-container">
+      <div class="absolute rounded-full bg-yellow-400 w-72 h-72" id="sun"></div>
+      <div class="absolute rounded-full bg-gray-900 w-72 h-72 opacity-0" id="moon"></div>
+    </div>
+    <p class="mt-4 text-gray-300 text-center max-w-xl">Watch how the Moon passes in front of the Sun during a solar eclipse.</p>
+  </section>
+
+  <!-- Meteor Shower Animation -->
+  <section id="meteors" class="py-16 bg-gradient-to-b from-black via-indigo-900 to-black text-center">
+    <h2 class="text-3xl font-semibold mb-8">🌠 Meteor Shower</h2>
+    <canvas id="meteorCanvas" class="w-full h-96"></canvas>
+    <p class="mt-6 text-gray-300">Meteors streak across the night sky in this animation.</p>
+  </section>
+
+  <!-- Footer -->
+  <footer class="text-center py-6 text-gray-500 text-sm">
+    &copy; 2025 Discover Astronomy | Built with ❤ and the cosmos in mind.
+  </footer>
+
+  <!-- Animation Scripts -->
+  <script>
+    // Eclipse animation - improved movement
+    gsap.to("#moon", {
+      x: 100,
+      duration: 3,
+      opacity: 1,
+      repeat: -1,
+      yoyo: true,
+      ease: "power1.inOut"
+    });
+    gsap.to("#moon", {
+      y: 30,
+      duration: 3,
+      repeat: -1,
+      yoyo: true,
+      ease: "power1.inOut"
+    });
+
+    // Meteor shower - improved movement and glow
+    const canvas = document.getElementById("meteorCanvas");
+    const ctx = canvas.getContext("2d");
+    function resizeCanvas() {
+      canvas.width = window.innerWidth;
+      canvas.height = 400;
+    }
+    resizeCanvas();
+    window.addEventListener("resize", resizeCanvas);
+
+    class Meteor {
+      constructor() {
+        this.reset();
+      }
+
+      reset() {
+        this.x = Math.random() * canvas.width;
+        this.y = Math.random() * -canvas.height;
+        this.length = Math.random() * 80 + 20;
+        this.speed = Math.random() * 6 + 3;
+        this.opacity = Math.random() * 0.5 + 0.5;
+        this.angle = Math.PI / 4 + (Math.random() - 0.5) * 0.2;
+        this.color = `rgba(${200 + Math.random()*55},${200 + Math.random()*55},255,${this.opacity})`;
+        this.glow = Math.random() * 20 + 10;
+      }
+
+      draw() {
+        ctx.save();
+        ctx.shadowColor = "#fff";
+        ctx.shadowBlur = this.glow;
+        ctx.beginPath();
+        ctx.moveTo(this.x, this.y);
+        ctx.lineTo(
+          this.x + Math.cos(this.angle) * this.length,
+          this.y + Math.sin(this.angle) * this.length
+        );
+        ctx.strokeStyle = this.color;
+        ctx.lineWidth = 2.5;
+        ctx.stroke();
+        ctx.restore();
+      }
+
+      update() {
+        this.x += Math.cos(this.angle) * this.speed;
+        this.y += Math.sin(this.angle) * this.speed;
+        if (this.y > canvas.height || this.x > canvas.width) {
+          this.reset();
+        }
+        this.draw();
+      }
+    }
+
+    // Twinkling stars background
+    const stars = Array.from({ length: 120 }, () => ({
+      x: Math.random() * canvas.width,
+      y: Math.random() * canvas.height,
+      radius: Math.random() * 1.5 + 0.5,
+      alpha: Math.random() * 0.5 + 0.5,
+      delta: (Math.random() - 0.5) * 0.02
+    }));
+
+    function drawStars() {
+      stars.forEach(star => {
+        star.alpha += star.delta;
+        if (star.alpha < 0.3 || star.alpha > 1) star.delta *= -1;
+        ctx.save();
+        ctx.globalAlpha = star.alpha;
+        ctx.beginPath();
+        ctx.arc(star.x, star.y, star.radius, 0, 2 * Math.PI);
+        ctx.fillStyle = "#fff";
+        ctx.shadowColor = "#fff";
+        ctx.shadowBlur = 8;
+        ctx.fill();
+        ctx.restore();
+      });
+    }
+
+    const meteors = Array.from({ length: 40 }, () => new Meteor());
+
+    function animateMeteors() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      drawStars();
+      meteors.forEach(m => m.update());
+      requestAnimationFrame(animateMeteors);
+    }
+
+    animateMeteors();
+  </script>
+</body>
+</html>

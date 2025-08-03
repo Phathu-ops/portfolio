@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Neo Blue Calculator</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Neo/Futuristic Calculator Styles -->
+    <style>
+        body {
+            background: linear-gradient(135deg, #0f2027 0%, #2c5364 100%);
+            font-family: 'Montserrat', Arial, sans-serif;
+            color: #e0eaff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .calc-container {
+            background: rgba(44, 83, 100, 0.85);
+            border-radius: 24px;
+            box-shadow: 0 8px 32px 0 #00cfff44;
+            padding: 32px 24px;
+            border: 1px solid #00cfff33;
+        }
+        table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 8px;
+        }
+        td {
+            background: linear-gradient(90deg, #1a2980 0%, #26d0ce 100%);
+            color: #fff;
+            font-size: 1.5rem;
+            font-weight: bold;
+            text-align: center;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px #00cfff33;
+            cursor: pointer;
+            transition: background 0.2s, transform 0.1s;
+            padding: 18px 0;
+            border: none;
+            user-select: none;
+        }
+        td:active {
+            background: linear-gradient(90deg, #26d0ce 0%, #1a2980 100%);
+            transform: scale(0.97);
+        }
+        input[type="text"] {
+            width: 100%;
+            font-size: 2rem;
+            padding: 12px;
+            border-radius: 12px;
+            border: none;
+            background: #222e3c;
+            color: #00cfff;
+            text-align: right;
+            box-shadow: 0 2px 8px #00cfff33;
+            margin-bottom: 8px;
+        }
+        .inputBox-row {
+            padding-bottom: 12px;
+        }
+        @media (max-width: 500px) {
+            .calc-container { padding: 12px 4px; }
+            td { font-size: 1.1rem; padding: 12px 0; }
+            input[type="text"] { font-size: 1.3rem; padding: 8px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="calc-container">
+        <table>
+            <tr class="inputBox-row">
+                <td colspan="4" style="padding-bottom: 12px;">
+                    <input type="text" id="inputBox" value="0" readonly/>
+                </td>
+            </tr>
+            <tr>
+                <td onclick="digitButtpress(7)">7</td>
+                <td onclick="digitButtpress(8)">8</td>
+                <td onclick="digitButtpress(9)">9</td>
+                <td onclick="operatButtPress('x')">×</td>
+            </tr>
+            <tr>
+                <td onclick="digitButtpress(4)">4</td>
+                <td onclick="digitButtpress(5)">5</td>
+                <td onclick="digitButtpress(6)">6</td>
+                <td onclick="operatButtPress('-')">−</td>
+            </tr>
+            <tr>
+                <td onclick="digitButtpress(1)">1</td>
+                <td onclick="digitButtpress(2)">2</td>
+                <td onclick="digitButtpress(3)">3</td>
+                <td onclick="operatButtPress('+')">+</td>
+            </tr>
+            <tr>
+                <td colspan="2" onclick="digitButtpress(0)">0</td>
+                <td onclick="buttAcPressed()">AC</td>
+                <td onclick="operatButtPress('/')">÷</td>   
+            </tr>
+            <tr>
+                <td colspan="4" onclick="buttEqualPressed()" style="background:#00cfff;color:#222e3c;">=</td>
+            </tr>
+        </table>
+    </div>
+    <script>
+        var newLine = true;
+        var value1;
+        var currentOperator;
+        function digitButtpress(button){
+            if (newLine){
+                document.getElementById("inputBox").value = button;
+                newLine = false;
+            } else {
+                var currentValue = document.getElementById("inputBox").value;
+                document.getElementById("inputBox").value = currentValue + button;
+            }
+        }
+        function buttAcPressed(){
+            document.getElementById("inputBox").value = 0;
+            newLine = true;
+        }
+        function operatButtPress(operator){
+            currentOperator = operator;
+            value1 = parseFloat(document.getElementById("inputBox").value);
+            newLine = true;
+        }
+        function buttEqualPressed(){
+            var value2 = parseFloat(document.getElementById("inputBox").value);
+            var finalTotal;
+            switch(currentOperator){
+                case "+":
+                    finalTotal = value1 + value2;
+                    break;
+                case "-":
+                    finalTotal = value1 - value2;
+                    break;
+                case "x":
+                    finalTotal = value1 * value2;
+                    break;
+                case "/":
+                    finalTotal = value2 !== 0 ? value1 / value2 : "Error";
+                    break;
+            }
+            document.getElementById("inputBox").value = finalTotal;
+            value1 = 0;
+            newLine = true;
+        }
+    </script>
+</body>
+</html>

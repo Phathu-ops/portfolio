@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Phath's Code Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Google Fonts for Neo/Futuristic look -->
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      background: linear-gradient(135deg, #0f2027 0%, #2c5364 100%);
+      color: #e0eaff;
+      font-family: 'Montserrat', Arial, sans-serif;
+      margin: 0;
+      min-height: 100vh;
+      padding: 0;
+      overflow-x: hidden;
+    }
+    header {
+      text-align: center;
+      padding: 48px 16px 24px 16px;
+      background: linear-gradient(90deg, #1a2980 0%, #26d0ce 100%);
+      box-shadow: 0 4px 32px #1a298088;
+    }
+    h1 {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 3rem;
+      letter-spacing: 2px;
+      color: #00cfff;
+      margin-bottom: 0.5rem;
+      text-shadow: 0 2px 16px #00cfff88;
+    }
+    .subtitle {
+      font-size: 1.2rem;
+      color: #e0eaff;
+      opacity: 0.8;
+      margin-bottom: 1.5rem;
+      font-family: 'Montserrat', Arial, sans-serif;
+      font-weight: 500;
+    }
+    .portfolio-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 32px;
+      padding: 32px 16px;
+      max-width: 1200px;
+      margin: auto;
+    }
+    .card {
+      background: rgba(44, 83, 100, 0.7);
+      border-radius: 24px;
+      box-shadow: 0 8px 32px 0 #00cfff44;
+      padding: 32px 24px 24px 24px;
+      position: relative;
+      transition: transform 0.15s, box-shadow 0.2s;
+      border: 1px solid #00cfff33;
+      overflow: hidden;
+    }
+    .card:hover {
+      transform: translateY(-8px) scale(1.03);
+      box-shadow: 0 16px 48px 0 #00cfff88;
+      border-color: #00cfff88;
+    }
+    .card-title {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 1.5rem;
+      color: #00cfff;
+      margin-bottom: 0.5rem;
+      letter-spacing: 1px;
+      text-shadow: 0 1px 8px #00cfff55;
+    }
+    .card-desc {
+      font-size: 1.05rem;
+      color: #e0eaff;
+      opacity: 0.85;
+      margin-bottom: 1.2rem;
+    }
+    .card-links {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    .card-links a {
+      background: linear-gradient(90deg, #00cfff 60%, #26d0ce 100%);
+      color: #0f2027;
+      font-weight: bold;
+      padding: 8px 18px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-family: 'Montserrat', Arial, sans-serif;
+      box-shadow: 0 2px 8px #00cfff44;
+      transition: background 0.2s, color 0.2s;
+    }
+    .card-links a:hover {
+      background: linear-gradient(90deg, #26d0ce 60%, #00cfff 100%);
+      color: #fff;
+    }
+    footer {
+      text-align: center;
+      padding: 32px 8px 16px 8px;
+      color: #e0eaff;
+      font-size: 1rem;
+      opacity: 0.7;
+      font-family: 'Montserrat', Arial, sans-serif;
+      letter-spacing: 1px;
+      background: linear-gradient(90deg, #1a2980 0%, #26d0ce 100%);
+      margin-top: 48px;
+      border-radius: 0 0 32px 32px;
+    }
+    @media (max-width: 600px) {
+      h1 { font-size: 2rem; }
+      .portfolio-grid { grid-template-columns: 1fr; padding: 16px 4px; }
+      .card { padding: 18px 10px 16px 10px; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Rain Animation Canvas -->
+  <canvas id="rain-canvas" style="position:fixed;top:0;left:0;width:100vw;height:100vh;pointer-events:none;z-index:0;"></canvas>
+  <header>
+    <h1>Phathutshedzo's Code Portfolio</h1>
+    <div class="subtitle">A showcase of my coolest web and Python projects.</div>
+  </header>
+  <main>
+    <div class="portfolio-grid">
+      <!-- Calculator App -->
+      <div class="card">
+        <div class="card-title">Calculator App</div>
+        <div class="card-desc">A futuristic, glassy calculator with blue and green LED effects. Try basic math with style!</div>
+        <div class="card-links">
+          <a href="./calculator.html">Open</a>
+        </div>
+      </div>
+      <!-- Astronomy Discovery Web -->
+      <div class="card">
+        <div class="card-title">Astronomy Discovery</div>
+        <div class="card-desc">Explore eclipses, meteor showers, and stargazing tips. Includes animated solar eclipse and meteor shower effects.</div>
+        <div class="card-links">
+          <a href="./astronomy%20web.html">Open</a>
+        </div>
+      </div>
+      <!-- Hearts Fun Page -->
+      <div class="card">
+        <div class="card-title">Hearts Fun Page</div>
+        <div class="card-desc">A playful page with hearts, emojis, and a "YAY!!" celebration when you say yes!</div>
+        <div class="card-links">
+          <a href="./hearts.html">Open</a>
+        </div>
+      </div>
+      <!-- Add more cards here as needed -->
+    </div>
+  </main>
+  <footer>
+    &copy; 2025 Phathutshedzo | Neo Blue Portfolio &mdash; All code is original and for learning.<br>
+    <span style="color:#00cfff;">Connect:</span>
+    <a href="mailto:phathutshedzomamphwe10@gmail.com" style="color:#00cfff;text-decoration:underline;">Email</a>
+    &nbsp;|&nbsp;
+    <a href="tel:+27660487939" style="color:#00cfff;text-decoration:underline;">Phone</a>
+    &nbsp;|&nbsp;
+    <a href="https://www.tiktok.com/@dante_dyb?_t=ZM-8yKH0yxDPhY&_r=1" target="_blank" style="color:#00cfff;text-decoration:underline;">TikTok</a>
+    &nbsp;|&nbsp;
+    <a href="https://www.instagram.com/p.dot_ma?igsh=dzYzb205dG50dGd4&utm_source=qr" target="_blank" style="color:#00cfff;text-decoration:underline;">Instagram</a>
+  </footer>
+  <script>
+    // Rain animation
+    const canvas = document.getElementById('rain-canvas');
+    const ctx = canvas.getContext('2d');
+    let W = window.innerWidth;
+    let H = window.innerHeight;
+    canvas.width = W;
+    canvas.height = H;
+
+    window.addEventListener('resize', () => {
+      W = window.innerWidth;
+      H = window.innerHeight;
+      canvas.width = W;
+      canvas.height = H;
+    });
+
+    const raindrops = [];
+    const rainColor = "#00cfff";
+    const rainCount = Math.floor(W / 10);
+
+    for (let i = 0; i < rainCount; i++) {
+      raindrops.push({
+        x: Math.random() * W,
+        y: Math.random() * H,
+        l: Math.random() * 18 + 12,
+        xs: Math.random() * 2 - 1,
+        ys: Math.random() * 12 + 8
+      });
+    }
+
+    function drawRain() {
+      ctx.clearRect(0, 0, W, H);
+      ctx.strokeStyle = rainColor;
+      ctx.lineWidth = 2;
+      ctx.shadowColor = "#00cfff";
+      ctx.shadowBlur = 8;
+      for (let i = 0; i < raindrops.length; i++) {
+        const r = raindrops[i];
+        ctx.beginPath();
+        ctx.moveTo(r.x, r.y);
+        ctx.lineTo(r.x + r.xs, r.y + r.l);
+        ctx.stroke();
+      }
+      moveRain();
+    }
+
+    function moveRain() {
+      for (let i = 0; i < raindrops.length; i++) {
+        const r = raindrops[i];
+        r.x += r.xs;
+        r.y += r.ys;
+        if (r.x > W || r.y > H) {
+          r.x = Math.random() * W;
+          r.y = -20;
+        }
+      }
+    }
+
+    function loopRain() {
+      drawRain();
+      requestAnimationFrame(loopRain);
+    }
+
+    loopRain();
+  </script>
+</body>
+</html>
